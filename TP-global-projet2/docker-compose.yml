@@ -81,6 +81,7 @@ services:
       - 3128:3128
     volumes:
       - ./squid.conf:/etc/squid/squid.conf
+      - ./passwords:/etc/squid/passwords
 
 ##### Conteneurs MATOMO (stats) + db.env + matomo.conf #####
   db:
