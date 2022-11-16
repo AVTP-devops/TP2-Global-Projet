@@ -1,22 +1,24 @@
 version: '3.7'
 
 services:
-  evian:
-    image: tomap74/evian
-    ports:
-      - 8083:80
-    volumes:
-      - ./index.html:/usr/share/nginx/html
+##### Conteneur Evian #####
+  #evian:
+  #  image: tomap74/evian
+  #  ports:
+  #    - 8083:80
+  #  volumes:
+  #    - ./index.html:/usr/share/nginx/html
 
 ##### Conteneur DHCP #####
   dhcp:
     image: sirferdek/isc-dhcp-server
     restart: always
-    ports:
-      - "67/udp"
+    #ports:
+    #  - "67/udp"
     volumes:
       #- /var/lib/dhcp:/var/lib/
       - ./dhcpd.conf:/etc/dhcp/dhcpd.conf
+    network_mode: "host"
 
 ##### Conteneurs LDAP #####
   openldap:
@@ -36,13 +38,13 @@ services:
       - LDAP_ADMIN_USERNAME=admin
       - LDAP_ADMIN_PASSWORD=admin_pass
       - LDAP_CONFIG_PASSWORD=config_pass
-      - LDAP_BASE_DN="dc=tomscop,dc=org"
+      #- LDAP_BASE_DN=""
       - LDAP_TLS_CRT_FILENAME=server.crt
       - LDAP_TLS_KEY_FILENAME=server.key
       - LDAP_TLS_CA_CRT_FILENAME=tomscop.org.ca.crt
-      - LDAP_READONLY_USER=true
-      - LDAP_READONLY_USER_USERNAME=user-ro
-      - LDAP_READONLY_USER_PASSWORD=ro_pass
+      #- LDAP_READONLY_USER=true
+      #- LDAP_READONLY_USER_USERNAME=user-ro
+      #- LDAP_READONLY_USER_PASSWORD=ro_pass
 
   phpldapadmin:
     image: osixia/phpldapadmin:latest
@@ -78,7 +80,7 @@ services:
     ports:
       - 3128:3128
     volumes:
-      - ./squid.config:/etc/squid/squid.config
+      - ./squid.conf:/etc/squid/squid.conf
 
 ##### Conteneurs MATOMO (stats) + db.env + matomo.conf #####
   db:
@@ -173,7 +175,7 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=Europe/Paris
-      - SERVERURL=tomscop.duckdns.org
+      - SERVERURL=localhost
       - SERVERPORT=51820
       #- PEERS=PC,TEL,PCPRO
       - PEERDNS=auto
