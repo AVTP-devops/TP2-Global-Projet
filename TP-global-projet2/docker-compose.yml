@@ -65,13 +65,13 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=Europe/Paris
-    #volumes:
+    volumes:
       #- ./syslog-config:/config
-      #- ./log:/var/log #optional
-    ports:
-      - 514:5514/udp
-      - 601:6601/tcp
-      - 6514:6514/tcp
+      - ./logs:/var/log #optional
+    #ports:
+    #  - 514:5514/udp
+    #  - 601:6601/tcp
+    #  - 6514:6514/tcp
     restart: unless-stopped
 
 ##### Conteneur PROXY #####
@@ -126,9 +126,10 @@ services:
   dns:
     image: ubuntu/bind9
     ports:
-      - 53:53
+      - 192.168.1.128:53:53/udp
     volumes:
       - ./named.conf:/etc/bind/named.conf
+      - ./bind:/var/lib/bind
 
 ##### Conteneur ZABBIX #####
   zabbix:
@@ -176,9 +177,9 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=Europe/Paris
-      - SERVERURL=localhost
+      - SERVERURL=192.168.1.128
       - SERVERPORT=51820
-      #- PEERS=PC,TEL,PCPRO
+      - PEERS=PC,TEL,PCPRO
       - PEERDNS=auto
       #- INTERNAL_SUBNET=10.13.13.0
       - ALLOWEDIPS=0.0.0.0/0
