@@ -11,8 +11,8 @@
 
 ## A vérifier ##
 - syslog-ng -> logs ?
-- wireguard -> connexion au server par vpn ?
-- squid -> accès web OK mais erreur
+- wireguard -> test tunnel
+- squid -> test proxy firefox
 
 ## A faire ##
 - evian -> page index ne s'affiche pas
