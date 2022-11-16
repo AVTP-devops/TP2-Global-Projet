@@ -9,12 +9,12 @@
 - zap       OK + login OK
 - DHCP      OK
 
-## A vérifier ##
+## En cours ##
 - syslog-ng -> logs ?
 - wireguard -> test tunnel
 - squid -> test proxy firefox
+- DNS -> bind/tomscop + named.conf ?
 
 ## A faire ##
 - evian -> page index ne s'affiche pas
 - swag -> a faire
-- DNS -> ajouter un DNS a une IP et tester avec nslookup
