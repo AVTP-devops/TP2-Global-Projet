@@ -1,0 +1,14 @@
+$TTL    604800
+@   IN  SOA docker.tomscop. root.docker.tomscop. (
+                  2     ; Serial
+             604800     ; Refresh
+              86400     ; Retry
+            2419200     ; Expire
+             604800 )   ; Negative Cache TTL
+;
+@      IN  NS  ns.docker.tomscop.
+ns     IN  A   172.17.1.200
+zabbix IN  A   172.22.1.10
+zap    IN  A   172.17.1.11
+squid  IN  A   172.22.1.12
+matomo IN  A   172.22.1.13
