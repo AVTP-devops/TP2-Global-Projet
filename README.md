@@ -10,10 +10,11 @@
 
 ## A vérifier ##
 - syslog-ng -> logs ?
-- wireguard -> cnnexion au server par vpn ?
+- wireguard -> connexion au server par vpn ?
 - DHCP -> connecté vm et checker IP
 
 ## A faire ##
 - DNS -> fichier conf
 - evian -> page index ne s'affiche pas
 - swag -> a faire
+- squid -> accès web OK mais erreur
