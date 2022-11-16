@@ -5,14 +5,15 @@
 - portainer OK + login OK
 - LDAP      OK + login OK
 - zabbix    OK + login OK
-- wireshark OK 
-- zap       OK
-- evian     PAS OK
+- wireshark OK + login OK
+- zap       OK + login OK
 
 ## A vérifier ##
-- syslog-ng
-- wireguard
+- syslog-ng -> logs ?
+- wireguard -> cnnexion au server par vpn ?
+- DHCP -> connecté vm et checker IP
 
 ## A configurer ##
-- DHCP OK
-- DNS
+- DNS -> fichier conf
+- evian -> page index ne s'affiche pas
+- swag -> a faire
