@@ -19,3 +19,4 @@
 
 ## A faire ##
 - evian -> page index ne s'affiche pas
+- SWAG : Garder uniquement les fichiers necessaires ?
