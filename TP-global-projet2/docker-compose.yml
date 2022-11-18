@@ -66,8 +66,8 @@ services:
       - PGID=1000
       - TZ=Europe/Paris
     volumes:
-      #- ./syslog-config:/config
-      - ./logs:/var/log #optional
+      - ./syslog-config:/config
+      #- ./logs:/var/log #optional
     #ports:
     #  - 514:5514/udp
     #  - 601:6601/tcp
