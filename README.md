@@ -14,7 +14,7 @@
 - wireguard -> test tunnel
 - squid -> test proxy firefox
 - DNS -> bind/tomscop + named.conf ?
+- swag -> conf a faire -> (/ heimdall) + (tous les subdomain a conf)
 
 ## A faire ##
 - evian -> page index ne s'affiche pas
-- swag -> a faire
