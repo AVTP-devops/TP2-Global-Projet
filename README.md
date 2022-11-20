@@ -1,4 +1,4 @@
-# TP2-Global-Projet
+# TP2-Global-Projet AV-TP
 
 Ce TP est rendu par le groupe Arnaud VINSON et Thomas PONS.
 
