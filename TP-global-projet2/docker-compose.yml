@@ -2,19 +2,19 @@ version: '3.7'
 
 services:
 ##### Conteneur Evian #####
-  #evian:
-  #  image: tomap74/evian
-  #  ports:
-  #    - 8083:80
-  #  volumes:
-  #    - ./index.html:/usr/share/nginx/html
+  evian:
+    image: tomap74/evian
+    ports:
+      - 8083:80
+    volumes:
+      - ./index.html:/usr/share/nginx/html
 
 ##### Conteneur DHCP #####
   dhcp:
     image: sirferdek/isc-dhcp-server
     restart: always
-    #ports:
-    #  - "67/udp"
+    ports:
+      - "67/udp"
     volumes:
       #- /var/lib/dhcp:/var/lib/
       - ./dhcpd.conf:/etc/dhcp/dhcpd.conf
