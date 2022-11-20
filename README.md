@@ -24,13 +24,13 @@ Duckdns nous a permis d'obtenir un DNS, ici tomscop.duckdns.org.
 SWAG est configuré afin de distribuer les conteneurs asociés en "subdomains" pour des raisons de compatibilité.
 
 Ces services sont disponible depuis un navigateur web :
-Heimdall  = https://tomscop.duckdns.org
-Matomo    = https://matomo.tomscop.duckdns.org
-Zabbix    = https://zabbix.tomscop.duckdns.org
-Zap       = https://zap.tomscop.duckdns.org
-Wireshark = https://wireshark.tomscop.duckdns.org
-Portainer = https://portainer.tomscop.duckdns.org
-LDAP      = https://phpldapadmin.tomscop.duckdns.org
+- Heimdall  = https://tomscop.duckdns.org
+- Matomo    = https://matomo.tomscop.duckdns.org
+- Zabbix    = https://zabbix.tomscop.duckdns.org
+- Zap       = https://zap.tomscop.duckdns.org
+- Wireshark = https://wireshark.tomscop.duckdns.org
+- Portainer = https://portainer.tomscop.duckdns.org
+- LDAP      = https://phpldapadmin.tomscop.duckdns.org
 
 Le serveur DHCP distribue correctement les adresses et le serveur DNS associe bien les noms DNS de chacun.
 
